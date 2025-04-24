@@ -1,46 +1,156 @@
-# Getting Started with Create React App and Redux
+# Task Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+A modern task management application built with React, TypeScript, and Express.js.
+
+## Features
+
+- Dashboard with task analytics and charts
+- Task list with infinite scrolling
+- Create, edit, and delete tasks
+- Filter and sort tasks
+- Dark/Light mode theme
+- Toast notifications
+- Responsive design
+
+## Tech Stack
+
+### Frontend
+- React with TypeScript
+- Redux Toolkit for state management
+- Styled Components for styling
+- Recharts for data visualization
+- React Router for navigation
+
+### Backend
+- Express.js with TypeScript
+- RESTful API endpoints
+- Mock data for development
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+## Setup Instructions
+
+### Backend Setup
+
+1. Navigate to the server directory:
+```bash
+cd server
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The server will start on http://localhost:3001
+
+### Frontend Setup
+
+1. From the project root directory, install dependencies:
+```bash
+npm install
+```
+
+2. Start the development server:
+```bash
+npm start
+```
+
+The application will start on http://localhost:3000
+
+## Project Structure
+
+```
+task-management-comet/
+├── server/                    # Backend server
+│   ├── data/                 # Mock data
+│   ├── routes/               # API routes
+│   ├── types/                # TypeScript types
+│   └── index.ts              # Server entry point
+├── src/
+│   ├── app/                  # App configuration
+│   ├── components/           # React components
+│   ├── features/             # Redux slices
+│   ├── pages/                # Page components
+│   ├── services/             # API services
+│   ├── styles/               # Global styles
+│   ├── types/                # TypeScript types
+│   └── utils/                # Utility functions
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory:
 
-### `npm start`
+### Frontend Scripts
+```bash
+npm start          # Start development server
+npm test          # Run tests
+npm run build     # Build for production
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend Scripts
+```bash
+cd server
+npm run dev       # Start development server
+npm run build     # Build TypeScript
+npm start         # Start production server
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## API Endpoints
 
-### `npm test`
+- `GET /api/tasks` - Get all tasks (supports pagination)
+- `POST /api/tasks` - Create a new task
+- `PUT /api/tasks/:id` - Update a task
+- `DELETE /api/tasks/:id` - Delete a task
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### Task Management
+- Create and manage tasks
+- Set priority levels
+- Track status
+- Assign due dates
+- Add estimated hours
+- Mark tasks as complete
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Dashboard
+- Task completion trends
+- Due tasks overview
+- Estimation distribution
+- Real-time updates
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### UI Features
+- Dark/Light mode toggle
+- Infinite scrolling
+- Toast notifications
+- Confirmation dialogs
+- Loading states
+- Error handling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Browser Support
 
-### `npm run eject`
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License - see the LICENSE file for details.
